@@ -1,0 +1,8 @@
+#render {
+    display: none;
+}
+
+body, canvas {
+    margin: 0;
+    padding: 0;
+}
