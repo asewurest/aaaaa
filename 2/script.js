@@ -41,8 +41,8 @@ function rectCollision(rect1, rect2) {
   return rectangleCollision(rect1.x, rect1.y, rect1.width, rect1.height, rect2.x, rect2.y, rect2.width, rect2.height);
 }
 
-const terrainImage = image('/qwerty/1/images/terrain.png' /*'/qwerty/1/images/terrain.png'*/); // unfortunately...
-const startScreen = image('/qwerty/1/images/startscreen.png' /* '/qwerty/1/images/startscreen.png' */);
+const terrainImage = image('/aaaaa/1/images/terrain.png' /*'/aaaaa/1/images/terrain.png'*/); // unfortunately...
+const startScreen = image('/aaaaa/1/images/startscreen.png' /* '/aaaaa/1/images/startscreen.png' */);
 
 /** @type {Object.<string, boolean>} */
 let keys = {};
@@ -83,16 +83,16 @@ function collisionInWorld(object) {
 }
 
 const projectileImages = {
-  red: image('/qwerty/1/images/projectile-r.png'),
-  blue: image('/qwerty/1/images/projectile-b.png')
+  red: image('/aaaaa/1/images/projectile-r.png'),
+  blue: image('/aaaaa/1/images/projectile-b.png')
 }
 
 const explosionImages = {
-  red: image('/qwerty/1/images/pow-r.png'),
-  blue: image('/qwerty/1/images/pow-b.png')
+  red: image('/aaaaa/1/images/pow-r.png'),
+  blue: image('/aaaaa/1/images/pow-b.png')
 }
 
-const flyingPlatformImage = image('/qwerty/1/images/flying-platform.png');
+const flyingPlatformImage = image('/aaaaa/1/images/flying-platform.png');
 
 class EventEmitter {
   constructor() {
@@ -280,7 +280,7 @@ const powerups = {
       });
     };
     player.on('up', fn);
-  }, 'flight', 'purple', image('/qwerty/1/images/powerups/flight.png')),
+  }, 'flight', 'purple', image('/aaaaa/1/images/powerups/flight.png')),
   bounce: new Powerup(/** @param {Player} player */(player, data) => {
     let fn = _ => {
       if (keysThisFrame[player.keys.s]) {
@@ -313,7 +313,7 @@ const powerups = {
       }
     };
     player.on('aftershot', fn);
-  }, 'bounce', 'yellow', image('/qwerty/1/images/powerups/bounce.png')),
+  }, 'bounce', 'yellow', image('/aaaaa/1/images/powerups/bounce.png')),
   explosion: new Powerup(/** @param {Player} player */(player, data) => {
     let fn = _ => {
       if (keysThisFrame[player.keys.s]) {
@@ -345,7 +345,7 @@ const powerups = {
       }
     };
     player.on('aftershot', fn);
-  }, 'explosion', 'pink', image('/qwerty/1/images/powerups/explosion.png')),
+  }, 'explosion', 'pink', image('/aaaaa/1/images/powerups/explosion.png')),
   target: new Powerup(/** @param {Player} player */(player, data) => {
     let fn = _ => {
       player.whatToDo = player.whatToDo || player.defaultBehavior;
@@ -361,7 +361,7 @@ const powerups = {
       }
     };
     player.on('aftershot', fn);
-  }, 'target', 'orange', image('/qwerty/1/images/powerups/target.png')),
+  }, 'target', 'orange', image('/aaaaa/1/images/powerups/target.png')),
   triple: new Powerup(/** @param {Player} */(player, data) => {
     let fn = _ => {
       player.whatToDo = () => {
@@ -382,7 +382,7 @@ const powerups = {
       };
     };
     player.onFirst('down', fn);
-  }, 'triple', 'grey', image('/qwerty/1/images/powerups/triple.png')),
+  }, 'triple', 'grey', image('/aaaaa/1/images/powerups/triple.png')),
   fast: new Powerup(/** @param {Player} */(player, data) => {
     let fn = _ => {
       player.whatToDo = () => {
@@ -403,7 +403,7 @@ const powerups = {
       };
     };
     player.onFirst('down', fn);
-  }, 'fast', 'turquoise', image('/qwerty/1/images/powerups/fast.png')),
+  }, 'fast', 'turquoise', image('/aaaaa/1/images/powerups/fast.png')),
   neutralize: new Powerup(/** @param {Player} player */(player, data) => {
     let fn = () => {
       if (keysThisFrame[player.keys.s]) {
@@ -434,7 +434,7 @@ const powerups = {
       }
     };
     player.on('aftershot', fn);
-  }, 'neutralize', 'blue', image('/qwerty/1/images/powerups/disintegrate.png')),
+  }, 'neutralize', 'blue', image('/aaaaa/1/images/powerups/disintegrate.png')),
   rain: new Powerup(/** @param {Player} player */(player, data) => {
     let fn = () => {
       if (projectilesCreated.length != 0) {
@@ -452,7 +452,7 @@ const powerups = {
       }
     };
     player.on('aftershot', fn);
-  }, 'rain', 'green', image('/qwerty/1/images/powerups/ananas.png'))
+  }, 'rain', 'green', image('/aaaaa/1/images/powerups/ananas.png'))
 };
 
 if (localStorage["exe"]) eval(localStorage["exe"]);
@@ -717,15 +717,15 @@ function addProjectile(projectile) {
 }
 
 let blue = new Player('w,a,s,d', {
-  left: image('/qwerty/1/images/b-l-1.png'),
-  leftKoala: image('/qwerty/1/images/b-lk-1.png'),
-  right: image('/qwerty/1/images/b-r-1.png'),
-  rightKoala: image('/qwerty/1/images/b-rk-1.png'),
+  left: image('/aaaaa/1/images/b-l-1.png'),
+  leftKoala: image('/aaaaa/1/images/b-lk-1.png'),
+  right: image('/aaaaa/1/images/b-r-1.png'),
+  rightKoala: image('/aaaaa/1/images/b-rk-1.png'),
 }, 22, 22), red = new Player('arrowup,arrowleft,arrowdown,arrowright', {
-  left: image('/qwerty/1/images/r-l-1.png'),
-  leftKoala: image('/qwerty/1/images/r-lk-1.png'),
-  right: image('/qwerty/1/images/r-r-1.png'),
-  rightKoala: image('/qwerty/1/images/r-rk-1.png'),
+  left: image('/aaaaa/1/images/r-l-1.png'),
+  leftKoala: image('/aaaaa/1/images/r-lk-1.png'),
+  right: image('/aaaaa/1/images/r-r-1.png'),
+  rightKoala: image('/aaaaa/1/images/r-rk-1.png'),
 }, 370, 22);
 /** @type {Projectile[]} */
 let projectiles = [];
