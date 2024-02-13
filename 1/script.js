@@ -1042,7 +1042,7 @@ for (var i = 0; i < images.length; i++) {
             addEventListener('click', e => {
                 if (act) {
                     act = false;
-                    if (e.pageY > window.innerHeight * 0.7) location.href = './apocalypse/index.html'
+                    if (e.pageY > window.innerHeight * 0.7) location.href = './2/index.html'
                     players = e.pageY > window.innerHeight / 3 ? 2 : 1;
                     //if (e.altKey) players = 0;
                     main();
