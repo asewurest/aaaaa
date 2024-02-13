@@ -41,7 +41,7 @@ function rectCollision(rect1, rect2) {
   return rectangleCollision(rect1.x, rect1.y, rect1.width, rect1.height, rect2.x, rect2.y, rect2.width, rect2.height);
 }
 
-const terrainImage = image('/aaaaa/1/images/terrain.png' /*'/aaaaa/1/images/terrain.png'*/); // unfortunately...
+const terrainImage = image('/aaaaa/1/images/Terrain.png' /*'/aaaaa/1/images/terrain.png'*/); // unfortunately...
 const startScreen = image('/aaaaa/1/images/startscreen.png' /* '/aaaaa/1/images/startscreen.png' */);
 
 /** @type {Object.<string, boolean>} */
