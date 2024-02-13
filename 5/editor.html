@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="editor.css">
+  </head>
+  <body>
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <div id="choose">
+      <img src="upload.png" id="upload" width="32" height="32">
+      <div class="separate"></div>
+      <img src="create.png" id="create" width="32" height="32">
+    </div>
+    <input type="file" id="upload-input" accept="application/json">
+    <div id="settings" class="settings-hidden">
+      <input id="map-name"></input>
+      <select id="load-preset"><option value="-load">charger...</option></select>
+      <button id="download">télécharger</button>
+      <a id="download-a">[) () \/\/ |\| |_ () /\ [)</a>
+    </div>
+    <img src="settings.png" id="settings-toggle" class="hidden" draggable="false">
+    <script src="maps.js" charset="utf-8"></script>
+    <script src="common.js" charset="utf-8"></script>
+    <script src="editor.js" charset="utf-8"></script>
+  </body>
+</html>

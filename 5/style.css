@@ -1,0 +1,31 @@
+#canvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 600px) and (min-height: 600px) {
+  #canvas {
+    width: 680px;
+    height: 680px;
+  }
+}
+
+body {
+  background-color: black;
+}
+
+#generate {
+  position: fixed;
+  left: -60px;
+  top: -60px;
+}
+
+#light, #background {
+  position: fixed;
+  left: -300px;
+  top: -300px;
+}

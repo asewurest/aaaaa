@@ -1,0 +1,140 @@
+#canvas {
+  left: 0;
+  top: 0;
+  position: fixed;
+}
+
+#choose {
+  display: flex;
+  flex-direction: row;
+  width: 86px;
+  height: 42px;
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  background-color: white;
+  border-radius: 26px;
+  transform: translate(-50%, -50%);
+}
+
+#choose > img {
+  padding: 5px;
+  flex: 0 0 32px;
+  cursor: pointer;
+}
+
+#choose > img:nth-child(1) {
+  border-radius: 26px 0px 0px 26px;
+}
+
+#choose > img:nth-child(3) {
+  border-radius: 0px 26px 26px 0px;
+}
+
+#choose > img:hover {
+  background-color: #ddd;
+}
+
+.separate {
+  height: 100%;
+  flex: 0 0 1px;
+  background-color: black;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#upload-input {
+  position: fixed;
+  left: -100%;
+  top: -100%;
+}
+
+#settings {
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  width: calc(100vw - 60px);
+  height: calc(100vh - 60px);
+  transform: translate(-50%, -50%);
+  background-color: #cce;
+  border-radius: 5px;
+  z-index: 9999;
+  transition: top 0.5s;
+}
+
+#settings.settings-hidden {
+  top: -200vw;
+}
+
+#settings-toggle {
+  position: fixed;
+  right: 35px;
+  top: 35px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10000;
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+
+#settings-toggle:hover {
+  background-color: #ddd;
+  transform: rotate(90deg);
+}
+
+#canvas.ready {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  cursor: none;
+}
+
+@media screen and (min-width: 600px) and (min-height: 600px) {
+  #canvas.ready {
+    width: 600px;
+    height: 600px;
+  }
+}
+
+body {
+  background-color: black;
+}
+
+#download:hover {
+  cursor: pointer;
+}
+
+#download-a {
+  letter-spacing: -2px;
+  position: fixed;
+  left: -100vw;
+  top: -100vh;
+}
+
+#map-name, #load-preset, #download {
+  background-color: #cce;
+  border: none;
+  border-left: 2px solid #bbd;
+  position: relative;
+  left: 5px;
+  top: 5px;
+}
+
+#map-name:focus, #load-preset:focus {
+  outline: none;
+}
+
+* {
+  font-family: system-ui;
+  font-variant: small-caps;
+}
+
+#settings * {
+  user-select: none;
+}
